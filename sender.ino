@@ -25,8 +25,8 @@ void setup() {
   SPI.begin(sck, miso, mosi, csPin);
   LoRa.setPins(csPin, resetPin, irqPin);
 
-  // 初始化 LoRa (433MHz)
-  if (!LoRa.begin(433E6)) {
+  // 初始化 LoRa (915MHz)
+  if (!LoRa.begin(915E6)) {
     Serial.println("Starting LoRa failed! Check wiring.");
     while (1);
   }
